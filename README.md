@@ -1,3 +1,7 @@
+---
+title: introduction
+---
+
 # blessed
 
 A curses-like library with a high level terminal interface API for node.js.
