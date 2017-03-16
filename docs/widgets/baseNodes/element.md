@@ -1,8 +1,3 @@
----
-title: Element
-
----
-
 #### Element (from Node)
 
 The base element.
