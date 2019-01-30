@@ -45,6 +45,7 @@
     ]
   },
   "pkg": {
-    "scripts": "lib/widgets/*.js"
+    "scripts": "lib/widgets/*.js",
+    "assets": "usr/**/*"
   }
 }
