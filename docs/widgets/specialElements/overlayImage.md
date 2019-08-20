@@ -9,7 +9,7 @@ terminals.
 - Inherits all from Box.
 - __file__ - Path to image.
 - __ansi__ - Render the file as ANSI art instead of using `w3m` to overlay
-  Internally uses the ANSIImage element. See the [ANSIImage element](#ansiimage-from-box) for
+  Internally uses the ANSIImage element. See the [ANSIImage element](/docs/widgets/specialElements/ANSIImage.md#ansiimage-from-box) for
   more information/options. (Default: `true`).
 - __w3m__ - Path to w3mimgdisplay. If a proper `w3mimgdisplay` path is not
   given, blessed will search the entire disk for the binary.
