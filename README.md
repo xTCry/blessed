@@ -12,6 +12,7 @@ See [book documentation](docs/README.md) or [original documentation](https://git
 
 ## Changes
 
+- `(When WebPack)` Exporting usr files to temp
 - Merged changes from [medv/blessed](https://github.com/antonmedv/blessed)
 
 ## License
