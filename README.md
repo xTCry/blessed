@@ -1,20 +1,18 @@
-# @medv/blessed
+# @xtcry/blessed
 
-This is fork of [blessed](https://github.com/chjj/blessed) library with a few changes for [fx](https://github.com/antonmedv/fx) package.
+This is fork of [blessed](https://github.com/chjj/blessed) and [blessed](https://github.com/antonmedv/blessed).
 
-* medv/blessed
-  * chjj/blessed
-
-## Changes
-
-- Merged changes from [neo-blessed](https://github.com/embark-framework/neo-blessed)
-- Optimized scrolling speed
-- Added `update` event for textarea
-- Added `getScreenLine`, `getNumber`, `getScreenNumber` to _Element_
+* chjj/blessed
+  * medv/blessed
+    * xtcry/blessed
 
 ## Docs
 
-See original [documentation](https://github.com/chjj/blessed#documentation).
+See [book documentation](docs/README.md) or [original documentation](https://github.com/chjj/blessed#documentation).
+
+## Changes
+
+- Merged changes from [medv/blessed](https://github.com/antonmedv/blessed)
 
 ## License
 
