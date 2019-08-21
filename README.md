@@ -1,6 +1,6 @@
 # @xtcry/blessed
 
-This is fork of [blessed](https://github.com/chjj/blessed) and [blessed](https://github.com/antonmedv/blessed).
+This is fork of [blessed](https://github.com/chjj/blessed) and [medv/blessed](https://github.com/antonmedv/blessed).
 
 * chjj/blessed
   * medv/blessed
@@ -12,7 +12,8 @@ See [book documentation](docs/README.md) or [original documentation](https://git
 
 ## Changes
 
-- `(When WebPack)` Exporting usr files to temp
+- Added dependencies [@xtcry/`pty.js`](https://github.com/xTCry/pty.js) and [`term.js`](https://github.com/chjj/term.js/)
+- `(When WebPack)` Exporting `usr` files to temp
 - Merged changes from [medv/blessed](https://github.com/antonmedv/blessed)
 
 ## License

@@ -15,7 +15,7 @@
       "name": "xTCry (Vladislav Kh)"
     }
   ],
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "main": "./lib/blessed.js",
   "bin": "./bin/tput.js",
@@ -58,6 +58,10 @@
     "assets": "usr/**/*"
   },
   "devDependencies": {
-   "gitbook-cli": "^2.3.0"
+    "gitbook-cli": "^2.3.0"
+  },
+  "dependencies": {
+    "@xtcry/pty.js": "^0.3.2",
+    "term.js": "^0.0.7"
   }
 }
