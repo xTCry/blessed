@@ -15,7 +15,7 @@
       "name": "xTCry (Vladislav Kh)"
     }
   ],
-  "version": "2.0.2",
+  "version": "2.0.4",
   "license": "MIT",
   "main": "./lib/blessed.js",
   "bin": "./bin/tput.js",

@@ -5,7 +5,6 @@
  */
 
 var fs = require('fs')
-  , util = require('util')
   , path = require('path')
   , zlib = require('zlib')
   , assert = require('assert')
@@ -29,7 +28,7 @@ function PNG(file, options) {
   if (!file) throw new Error('no file');
 
   this.options = options || {};
-  this.colors = options.colors || require('blessed/lib/colors');
+  this.colors = options.colors || require('@xtcry/blessed/lib/colors');
   this.optimization = this.options.optimization || 'mem';
   this.speed = this.options.speed || 1;
 
@@ -281,18 +280,12 @@ PNG.prototype.parseChunks = function(chunks) {
 
 PNG.prototype.parseLines = function(data) {
   var pixels = []
-    , x
     , p
     , prior
     , line
     , filter
     , samples
-    , pendingSamples
-    , ch
-    , shiftStart
-    , i
-    , toShift
-    , sample;
+    , i;
 
   this.sampleDepth =
     this.colorType === 0 ? 1
@@ -507,7 +500,7 @@ PNG.prototype.sampleInterlacedLines = function(raw) {
   // Make a result array, and make it big enough. Interleaving
   // writes to the output array randomly (well, not quite), so the
   // entire output array must be in memory.
-  samples = new Buffer(vpr * this.height);
+  samples = Buffer.from(vpr * this.height);
   samples.fill(0);
 
   source_offset = 0;
@@ -1209,7 +1202,7 @@ PNG.prototype.gifMagick = function(input) {
 };
 
 PNG.prototype.decompress = function(buffers) {
-  return zlib.inflateSync(new Buffer(buffers.reduce(function(out, data) {
+  return zlib.inflateSync(Buffer.from(buffers.reduce(function(out, data) {
     return out.concat(Array.prototype.slice.call(data));
   }, [])));
 };
@@ -1488,7 +1481,7 @@ function GIF(file, options) {
             ext.data.push(buf.slice(p, p + size));
             p += size;
           }
-          ext.data = new Buffer(ext.data.reduce(function(out, data) {
+          ext.data = Buffer.from(ext.data.reduce(function(out, data) {
             return out.concat(Array.prototype.slice.call(data));
           }, []));
           // AnimExts looping extension (identical to netscape)
@@ -1557,7 +1550,7 @@ function GIF(file, options) {
   this.images = this.images.map(function(img, imageIndex) {
     var control = img.control || this;
 
-    img.lzw = new Buffer(img.lzw.reduce(function(out, data) {
+    img.lzw = Buffer.from(img.lzw.reduce(function(out, data) {
       return out.concat(Array.prototype.slice.call(data));
     }, []));
 
